@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.generalmobi.paysdk.dto.PayDialogAttrs;
@@ -45,16 +46,15 @@ public class MainActivity extends AppCompatActivity {
                 payReqParams.setAttributes(new PayDialogAttrs());   // Pay dialog attributes (optional)
 
                 PayPGService Service = null;
-
-                // Getting the PayPGService Instance. PayPGService.getStagingService() will
-                // return the service pointing to staging environment.
-                Service = PayPGService.getStagingService();
-
-                //TODO use either of both as per requirement
-
-                // Getting the PayPGService Instance. PayPGService.getProductionService() will
-                // return the service pointing to production environment.
-//                Service = PayPGService.getProductionService();
+                if (((RadioGroup)findViewById(R.id.rgServer)).getCheckedRadioButtonId() == R.id.rbStagServer){
+                    // Getting the PayPGService Instance. PayPGService.getStagingService() will
+                    // return the service pointing to staging environment.
+                    Service = PayPGService.getStagingService();
+                } else if (((RadioGroup)findViewById(R.id.rgServer)).getCheckedRadioButtonId() == R.id.rbProServer){
+                    // Getting the PayPGService Instance. PayPGService.getProductionService() will
+                    // return the service pointing to production environment.
+                    Service = PayPGService.getProductionService();
+                }
 
                 // Call this method and set PayReqParams object before starting transaction.
                 Service.initialize(payReqParams);

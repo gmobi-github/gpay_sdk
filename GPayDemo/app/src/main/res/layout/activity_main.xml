@@ -1,68 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <EditText
-        android:id="@+id/partnerCode"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Partner Code"
-        android:imeOptions="actionNext"
-        android:inputType="phone" />
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/ptxId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/partnerCode"
-        android:hint="Transaction Id"
-        android:imeOptions="actionNext"
-        android:inputType="text|textCapWords" />
+        <RadioGroup
+            android:id="@+id/rgServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/rbStagServer"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/appName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ptxId"
-        android:hint="App Name"
-        android:imeOptions="actionNext"
-        android:inputType="text" />
+            <RadioButton
+                android:id="@+id/rbStagServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Staging Server"/>
 
-    <EditText
-        android:id="@+id/amount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/appName"
-        android:hint="Amount"
-        android:imeOptions="actionNext"
-        android:inputType="number" />
+            <RadioButton
+                android:id="@+id/rbProServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Production Server"/>
 
-    <EditText
-        android:id="@+id/imei"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/amount"
-        android:hint="Imei"
-        android:imeOptions="actionNext"
-        android:inputType="number" />
+        </RadioGroup>
 
-    <EditText
-        android:id="@+id/secretKey"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imei"
-        android:hint="Secret Key"
-        android:imeOptions="actionDone"
-        android:inputType="text" />
+        <EditText
+            android:id="@+id/partnerCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Partner Code"
+            android:imeOptions="actionNext"
+            android:inputType="phone" />
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/secretKey"
-        android:layout_centerHorizontal="true"
-        android:text="Start Transaction" />
+        <EditText
+            android:id="@+id/ptxId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Transaction Id"
+            android:imeOptions="actionNext"
+            android:inputType="text|textCapWords" />
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/appName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="App Name"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:imeOptions="actionNext"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/imei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Imei"
+            android:imeOptions="actionNext"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/secretKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Secret Key"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Start Transaction" />
+
+    </LinearLayout>
+</ScrollView>
