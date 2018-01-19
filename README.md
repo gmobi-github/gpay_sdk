@@ -3,5 +3,5 @@ We will be providing our SDK to 3rd party apps for integration. Currently we wil
 # Document
 See the complete user manual [here](https://docs.google.com/document/d/e/2PACX-1vRC-ElKaI3ok3AIqdZsnJvPJEi1j1v6OJP0mSjW5OBfDuJ4Frrv3ZDLe-6FIUAERIAwBaj-Zm8zMQUJ/pub
 )
-# Help & Support :
+# Help & Support
 Please contact GMobi at [github@generalmobi.in](mailto:github@generalmobi.in) for any concern.
