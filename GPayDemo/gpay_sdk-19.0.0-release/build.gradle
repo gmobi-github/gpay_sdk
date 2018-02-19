@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('gpay_sdk-19.0.0-release.aar'))

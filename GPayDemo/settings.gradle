@@ -1,1 +1,1 @@
-include ':app', ':gpay_sdk-19.0.0-release'
+include ':app', ':gpay-sdk-20.0.0-release'

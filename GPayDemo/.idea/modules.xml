@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GPayDemo.iml" filepath="$PROJECT_DIR$/GPayDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gpay_sdk-19.0.0-release/gpay_sdk-19.0.0-release.iml" filepath="$PROJECT_DIR$/gpay_sdk-19.0.0-release/gpay_sdk-19.0.0-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gpay-sdk-20.0.0-release/gpay-sdk-20.0.0-release.iml" filepath="$PROJECT_DIR$/gpay-sdk-20.0.0-release/gpay-sdk-20.0.0-release.iml" />
     </modules>
   </component>
 </project>
